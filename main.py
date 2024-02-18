@@ -19,6 +19,17 @@ async def on_ready():
     
 @client.command()
 async def hello(ctx):
-    await ctx.send("Hello, I am a Fornite Weekly Update bot")
+    await ctx.send("https://tenor.com/view/fortnite-wave-hi-hello-gif-13632843")
+    
+@client.event
+async def on_member_join(member):
+    channel = client.get_channel(1040667357045063805)
+    await channel.send(f"Look who joined guys, it's @{member}. Another fucking faggot. I hope you are ready for some foooortniiite")
+    
+@client.event
+async def on_member_remove(member):
+    channel = client.get_channel(1040667357045063805)
+    await channel.send("https://tenor.com/view/fortnite-emote-waving-good-bye-sig-fortnite-gif-12033393698545252797")
+    await channel.send(f"Goodbye {member}. See you on the flipside")
     
 client.run(config.DISCORD_TOKEN)
